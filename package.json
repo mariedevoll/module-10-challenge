@@ -7,11 +7,15 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest", 
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^9.2.19"
+    "inquirer": "8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
   }
 }
