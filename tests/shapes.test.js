@@ -2,30 +2,30 @@
 const { Square, Triangle, Circle } = require("../lib/shapes")
 //circle
 describe("Circle", () => {
-    test("should render svg for a green circle element", () => {
-        const expectedSVG = `<circle cx ="150" cy="100" r="80" fill="green"/>`
+    test("should render svg for a red circle element", () => {
+        const expectedSVG = `<circle cx="150" cy="100" r="80" fill="red"/>`
         const circle = new Circle();
-        circle.setColor("green")
+        circle.setColor("red")
         const actualSVG = circle.render();
-        expectedSVG(actualSVG).toEqual(expectedSVG)
+        expect(actualSVG).toEqual(expectedSVG);
     })
  
-test("should accept a fillColor input", () => {
-    const expectedSVG = `<circle cs="150" cy="100" r="80" fill="green"/>`
-    const circle = new Circle();
-    circle.setColor("green");
-    const actualSVG = circle.render();
-    expectedSVG(actualSVG).toEqual(expectedSVG);
+    test("should accept a fillColor input", () => {
+        const expectedSVG = `<circle cx="150" cy="100" r="80" fill="purple"/>`
+        const circle = new Circle();
+        circle.setColor("purple")
+        const actualSVG = circle.render();
+        expect(actualSVG).toEqual(expectedSVG);
     })
 })
 //triangle
 describe("Triangle", () => {
-    test("should render svg for orange polygon element", () => {
-        const expectedSVG = `<polygon points="150, 18, 244, 182, 56, 182" fill="orange"/>`
+    test("should render svg for teal polygon element", () => {
+        const expectedSVG = `<polygon points="150, 18, 244, 182, 56, 182" fill="teal"/>`
         const triangle = new Triangle();
-        triangle.setColor("orange");
+        triangle.setColor("teal");
         const actualSVG = triangle.render();
-        expectedSVG(actualSVG).toEqual(expectedSVG);
+        expect(actualSVG).toEqual(expectedSVG);
         
     })
     test("should accept a fillColor input", () => {
@@ -33,7 +33,7 @@ describe("Triangle", () => {
         const triangle = new Triangle();
         triangle.setColor("orange");
         const actualSVG = triangle.render();
-        expectedSVG(actualSVG).toEqual(expectedSVG);
+        expect(actualSVG).toEqual(expectedSVG);
     })
 })
 //square
@@ -49,6 +49,6 @@ describe("Square", () => {
         const square = new Square();
         square.setColor("yellow");
         const actualSVG = square.render();
-        expectedSVG(actualSVG).toEqual(expectedSVG);
+        expect(actualSVG).toEqual(expectedSVG);
     })
 });
