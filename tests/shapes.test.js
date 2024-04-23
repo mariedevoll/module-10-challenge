@@ -3,13 +3,13 @@ const { Square, Triangle, Circle } = require("../lib/shapes")
 //circle
 describe("Circle", () => {
     test("should render svg for a green circle element", () => {
-        const expectedSVG = `<circle cs="150" cy="100" r="80" fill="green"/>`
+        const expectedSVG = `<circle cx ="150" cy="100" r="80" fill="green"/>`
         const circle = new Circle();
         circle.setColor("green");
         const actualSVG = circle.render();
         expectedSVG(actualSVG).toEqual(expectedSVG);
     })
-
+ 
 test("should accept a fillColor input", () => {
     const expectedSVG = `<circle cs="150" cy="100" r="80" fill="green"/>`
     const circle = new Circle()
