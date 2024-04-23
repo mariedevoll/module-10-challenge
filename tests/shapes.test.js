@@ -1,11 +1,11 @@
 // const { describe } = require("yargs")
-const { Square, Triangle, Circle } = require("../lib/shapes")
+const { Circle, Triangle, Square } = require("../lib/shapes")
 //circle
 describe("Circle", () => {
     test("should render svg for a red circle element", () => {
         const expectedSVG = `<circle cx="150" cy="100" r="80" fill="red"/>`
         const circle = new Circle();
-        circle.setColor("red")
+        circle.setColor("red");
         const actualSVG = circle.render();
         expect(actualSVG).toEqual(expectedSVG);
     })
@@ -13,7 +13,7 @@ describe("Circle", () => {
     test("should accept a fillColor input", () => {
         const expectedSVG = `<circle cx="150" cy="100" r="80" fill="purple"/>`
         const circle = new Circle();
-        circle.setColor("purple")
+        circle.setColor("purple");
         const actualSVG = circle.render();
         expect(actualSVG).toEqual(expectedSVG);
     })
@@ -42,12 +42,14 @@ describe("Square", () => {
         const expectedSVG = `<rect x="90" y="40" width="120" height="120" fill="yellow"/>`
         const square = new Square();
         square.setColor("yellow");
+        const actualSVG = square.render();
+        expect(actualSVG).toEqual(expectedSVG);
 
     })
     test("should accept a fillColor input", () => {
-        const expectedSVG = `<rect x="90" y="40" width="120" height="120" fill="yellow"/>`
+        const expectedSVG = `<rect x="90" y="40" width="120" height="120" fill="green"/>`
         const square = new Square();
-        square.setColor("yellow");
+        square.setColor("green");
         const actualSVG = square.render();
         expect(actualSVG).toEqual(expectedSVG);
     })
